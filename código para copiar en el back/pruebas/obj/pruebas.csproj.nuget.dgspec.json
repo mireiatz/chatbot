@@ -44,9 +44,9 @@
               "target": "Package",
               "version": "[2.2.5, )"
             },
-            "itext7": {
+            "Select.HtmlToPdf.NetCore": {
               "target": "Package",
-              "version": "[7.1.16, )"
+              "version": "[21.1.0, )"
             }
           },
           "imports": [

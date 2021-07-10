@@ -15,7 +15,7 @@ const config = {
         },
     },
     customComponents: {
-      header: () => <div style={{ backgroundColor: '#4d60c0', padding: "5px", borderRadius: "3px", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;" }}>&nbsp;</div>,
+      header: () => <div style={{ backgroundColor: '#4d60c0', padding: "5px", borderRadius: "3px", fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif" }}>&nbsp;</div>,
       userAvatar: (props) => <div className="userIcon">M</div>
     }
 }

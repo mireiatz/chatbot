@@ -1,32 +1,18 @@
-﻿using System;
+﻿using SelectPdf;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.IO;
-using iText.Kernel.Pdf;
-using iText.Layout;
-using iText.Layout.Element;
 
 namespace pruebas
 {
     class Program
     {
-
         static void Main(string[] args)
         {
-            PdfDocument pdfDocument = new PdfDocument(new PdfWriter(new FileStream("/hello.pdf", FileMode.Create, FileAccess.Write)));
-            Document document = new Document(pdfDocument);
-
-            String line = "Hello! Welcome to iTextPdf";
-            document.Add(new Paragraph(line));
-            document.Close();
-            Console.WriteLine("Awesome PDF just got created.");
-
-            //axios start timer
+            //axios start timer 
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
-
-            string sentences = "Hola, Berta. La verdad es que me encuentro bastante mal. Discuto todos los días con mi marido y me paso las noches llorando. y ate lo he dicho, muy mal porque discuto mucho con mi marido, me da miedo que quiera el divorcio. Tenemos un hijo y lo está pasando muy mal, está todo el día llorando porque discutimos mucho. Yo por las noches no puedo dormir casi y estoy muy cansada todo el día, además tengo que hacer la limpieza de la casa y me agobia todo siempre No puedo dormir en la cama con mi marido porque me da ansiedad, nos llevamos fatal, ya no estamos enamorados y eso me pone muy triste. Estoy pensando en irme a casa de mis padres un tiempo a ver si se tranquiliza la cosa, pero no quiero abandonar a mi hijo. Me hace estar muy cansada, no puedo hacer las tareas de la casa, cuando mi marido se va al trabajo y mi hijo al colegio me quedo traspuesta en el sofá, y cuando vuelve mi marido está muy enfadado porque no he limpiado y está todo sucio y no tiene la comida hecha. Entonces discutimos y me siento peor. Además mi hijo lo ve todo y le está afectando mucho, me da miedo que le cause un trauma. ";
 
             string sentencesWithoutPunctuation = new string(sentences.Where(c => !char.IsPunctuation(c)).ToArray());
             string[] words = sentencesWithoutPunctuation.Split(' ');
@@ -101,9 +87,6 @@ namespace pruebas
 
             if (chatbotWordsScore >= 3)
             {
-                /*axios end conversation*/
-                /* axios end timer*/
-
                 //stopwatch
                 stopWatch.Stop();
                 TimeSpan elapsedTime = stopWatch.Elapsed;
@@ -113,9 +96,6 @@ namespace pruebas
             }
             else if (words.Length > 200)
             {
-                /*axios. end conversation*/
-                /*axios end timer*/
-
                 //stopwatch
                 stopWatch.Stop();
                 TimeSpan elapsedTime = stopWatch.Elapsed;
@@ -214,10 +194,12 @@ namespace pruebas
                 return chatbotScore;
             }
 
+
+            /*//front
             static void TotalScore(double chatbotScore)
             {
                 string evaluation = string.Empty;
-                /*axios questionsscore*/
+                *//*axios questionsscore*//*
                 //double totalScore = chatbotScore + questionsScore;
                 //if (totalscore < 5)
                 //{
@@ -232,9 +214,9 @@ namespace pruebas
                 //    evaluation = "rasgos depresivos severos. es necesaria la consulta urgente con un especialista.";
                 //}
 
-                
-            }
-            
+
+            }*/
+
         }
     }
 }
